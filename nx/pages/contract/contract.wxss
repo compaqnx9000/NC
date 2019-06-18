@@ -1,0 +1,252 @@
+page {
+  background-color: #f4f4f4;
+}
+
+.ex-tag {
+  background-color: #fa4759 !important;
+}
+
+.ex-tag text {
+  color: #fff !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  font-size: 20rpx;
+  left: 78rpx;
+  top: 190rpx;
+  width: 178rpx;
+  height: 388rpx;
+  /* border: 1rpx solid #6c7384; */
+  border-radius: 40rpx;
+}
+
+.icon-left {
+  position: absolute;
+  font-size: 20rpx;
+  left: 308rpx;
+  top: 396rpx;
+  width: 54rpx;
+  height: 54rpx;
+  /* border: 1rpx solid #6c7384; */
+  border-radius: 20rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon-right {
+  position: absolute;
+  font-size: 20rpx;
+  left: 536rpx;
+  top: 396rpx;
+  width: 54rpx;
+  height: 54rpx;
+  /* border: 1rpx solid #6c7384; */
+  border-radius: 20rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.supplier {
+  position: absolute;
+  font-size: 20rpx;
+  left: 384rpx;
+  top: 432rpx;
+  color: #dae6d7;
+}
+
+.supplier-total {
+  position: absolute;
+  font-family: "GillSans-Bold";
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: bold;
+  left: 384rpx;
+  top: 392rpx;
+}
+
+.cooperated {
+  position: absolute;
+  font-size: 20rpx;
+  left: 612rpx;
+  top: 432rpx;
+  color: #dae6d7
+}
+
+.cooperated-count {
+  position: absolute;
+  font-size: 28rpx;
+  font-family: "GillSans-Bold";
+  font-weight: bold;
+  color: #fff;
+  left: 612rpx;
+  top: 392rpx;
+}
+
+.card-title {
+  position: absolute;
+  /* font-family: 'Snell Roundhand'; */
+  font-size: 52rpx;
+  color: #fff;
+  font-weight: bold;
+  left: 308rpx;
+  top: 265rpx;
+  /* width: 290rpx; */
+}
+
+.card-sub-title {
+  position: absolute;
+  /* font-family: 'Snell Roundhand'; */
+  font-size: 22rpx;
+  color: #dae6d7;
+  font-weight: bold;
+  left: 308rpx;
+  top: 340rpx;
+  width: 290rpx;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.coupon {
+  display: flex;
+  width: 100%;
+  height: 125px;
+  padding: 20rpx;
+  /* margin-bottom: 20px; */
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #f7f9fb;
+}
+
+.coupon-left {
+  display: flex;
+  width: 70%;
+  background: white;
+  border-radius: 5%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.coupon-left-left {
+  display: flex;
+  width: 30%;
+  padding-left: 20rpx;
+}
+
+.coupon-left-right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 40rpx;
+}
+
+.coupon-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  background: #739f68;
+  border-radius: 5%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.circle1 {
+  width: 20rpx;
+  height: 20rpx;
+  background: #f4f4f4;
+  position: absolute;
+  top: 90rpx;
+  left: calc((100% - 25rpx)*0.7);
+  border-radius: 50%;
+}
+
+.circle2 {
+  width: 20rpx;
+  height: 20rpx;
+  background: #f4f4f4;
+  position: absolute;
+  top: 150rpx;
+  left: calc((100% - 25rpx)*0.7);
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 24rpx;
+  color: #1c1c1c;
+}
+
+.price {
+  color: #fa4759; /* #739f68*/
+  font-weight: bold;
+}
+
+.progress {
+  width: 70%;
+  padding-top: 30%;
+}
+
+.progress-title {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.progress-title-font {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.date {
+  font-size: 20rpx;
+  color: #4e4e4e;
+  background: #fff;
+  border: 2px solid #678f5d;
+  padding: 6rpx 12rpx;
+  border-radius: 27px;
+  line-height: 1;
+  margin-right: 10rpx;
+}
+
+.navbar {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fa4759;
+}
+
+.navbar-title {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #4a1f67;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.loading {
+  font-size: 22rpx;
+  color: #ccc;
+}
+
+.loading::after {
+  border: none;
+}

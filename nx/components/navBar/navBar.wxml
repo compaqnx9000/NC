@@ -1,0 +1,13 @@
+<view class='status-bar'>
+  <view bindtap='goBack' style="height:10px;left:{{rect.left}}px;padding-top:{{rect.top}}px;" hidden='{{show_bol}}'>
+    <!-- <image src='../../images/back.png' style="width:20px;height:20px"></image> -->
+    <view style='margin-left:{{win_Width - rect.right}}px; display: flex;align-items: center; justify-content: center; border-radius: 27px;width:{{rect.width/2}}px;height:{{rect.height}}px;background: hsla(0, 0%, 100%, 0.6);' >
+    <image src='../../images/back.png' style="width:20px;height:20px"></image>
+    </view>
+  </view>
+  <!-- <view class="tabar tag-class" style="padding-top:{{bar_Height}}px;">
+    <text>{{title}}</text> height 28;top 36 bottom 68 android 真机
+  </view> -->
+  
+
+</view>

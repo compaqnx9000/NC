@@ -1,0 +1,51 @@
+<navBar title='我的' show_bol='{{false}}' tag-class="ex-tag"></navBar>
+
+<view class='container'>
+  <view class="header">
+    <image src='../../images/new-03_2x.png' style='width:100%;height:682rpx;border-radius:5%;'></image>
+    <text class="title">廊坊楠兮项目供应商资料库搜索与模糊查询</text>
+
+    <view class="board">
+      <!-- <image src='../../images/avatar.png' class="avatar"></image> -->
+      <image src='../../images/search2.png' class="search"></image>
+      <input bindinput="onInputChangeEvent" value='{{inputValue}}' confirm-type="search" focus="{{true}}" class="placeholder" placeholder="输入供应商名称、产品或项目关键字" bindblur='onBlurEvent'></input>
+
+      <image wx:if="{{inputValue!=''}}" bindtap="clearInputEvent" src='../../images/close.png' class="clear"></image>
+
+    </view>
+
+    <view class="hot-box">
+      <block wx:for="{{hotWord}}">
+        <text class="hot" data-keyword='{{item}}' bindtap="clickHotEvent">{{item.word}}</text>
+      </block>
+    </view>
+
+
+
+    <view class="item-group">
+      <block wx:for="{{result}}">
+        <view class="item">
+          <navigator url="/pages/supplier-detail/supplier-detail?name={{item[0].name}}" class="card-left">
+            <image src="{{item[0].cover}}" class="search_cover"></image>
+            <text class="name"> {{item[0].name}}</text>
+          </navigator>
+          <navigator url="/pages/supplier-detail/supplier-detail?name={{item[1].name}}" wx:if="{{item[1]}}" class="card-right">
+            <image src="{{item[1].cover}}" class="search_cover"></image>
+
+            <text class="name"> {{item[1].name}}</text>
+          </navigator>
+        </view>
+      </block>
+
+      <view style="width:750rpx;height:100rpx">
+      </view>
+
+    </view>
+
+    <!-- <view class="card"></view>
+    <view class="card2"></view>
+    <view class="card3"></view>
+    <view class="card4"></view> -->
+
+  </view>
+</view>

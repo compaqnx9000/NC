@@ -1,0 +1,18 @@
+var ThousandsUtil = {
+  add_comma_toThousands: function(num) {
+
+    var str = num.toString();
+    console.log(str)
+    var regInt = getRegExp('(?=(?!^)(\d{3})+$)', 'g')
+    var regNum = getRegExp('(\d)(?=(\d{3})+\.)', 'g')
+    if(str.indexOf(".") > -1){
+      return str.replace(regNum, ',')
+    }
+    return str.replace(regInt, ',')
+
+  }
+}
+
+module.exports = {
+  add_comma_toThousands: ThousandsUtil.add_comma_toThousands //暴露接口调用
+}

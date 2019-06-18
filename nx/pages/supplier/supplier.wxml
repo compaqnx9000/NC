@@ -1,0 +1,50 @@
+<wxs module="numberUtil" src="../../utils/filter.wxs"></wxs>
+<!-- <navBar title='供应商' show_bol='{{false}}' tag-class="ex-tag"></navBar> -->
+
+<view class='container'>
+  <view class="header">
+    <image src='../../images/sbk.png' style='width:100%;height:644rpx;border-radius:5%;'></image>
+    <view class="board">
+      <image src='../../images/avatar.png' class="avatar"></image>
+      <navigator url="/pages/supplier-search/supplier-search?name={{888}}" class="card-find">
+            <image src='../../images/search.png' class="search"></image>
+            <text>输入供应商名称、产品或项目关键字</text>
+
+      </navigator>
+      <text class="card-comment">供应商</text>
+
+      <text class='supplier-total'>{{total}}</text>
+      <text class='supplier'>供应商总数</text>
+
+      <text class='cooperated-count'>{{cooperated}}</text>
+      <text class='cooperated'>已合作个数</text>
+
+      <image src='../../images/person.png' class="icon-left"></image>
+      <image src='../../images/five-star.png'class="icon-right"></image>
+
+    </view>
+  </view>
+  <view style="background: #f7f9fb;padding-top:300rpx">
+    <view style="font-family:'Snell Roundhand';font-weight: bold;padding-left:80rpx;background-color: #f7f9fb;font-size: 40rpx;color:#29395f;">供应商列表</view>
+    <navigator url="/pages/supplier-detail/supplier-detail?name={{item.name}}" class='new-item' wx:for="{{cellData}}" wx:key="item">
+      <view class="new-item-top">
+        <!-- <view class="new-item-left"> -->
+          <image mode='aspectFit' src='{{item.frontImg}}' class='thumbnail'></image>
+        <!-- </view> -->
+        <view class="new-item-right">
+          <text class='new-item-title'>{{item.name}}</text>
+          <text style='font-family:"Apple LiSung Light";padding-left:34rpx;font-size: 26rpx;color: #8b929f'>{{item.product}}</text>
+        </view>
+      </view>
+
+      <!-- 分割线-->
+      <view class='dividing-line'></view>
+
+    </navigator>
+  </view>
+
+
+</view>
+
+<button wx:if="{{hasMoreData}}" class="loading" loading disabled>正在加载...</button>
+<button wx:else class="loading" disabled>------------  我是有底线的  ------------</button>

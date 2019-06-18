@@ -1,0 +1,97 @@
+<navBar title='我的' show_bol='{{false}}' tag-class="ex-tag"></navBar>
+
+<view class='container'>
+
+  <view class="header">
+    <swiper class="slide-image" indicator-dots="true" autoplay="true" interval="4000" duration="500" circular="true" src='{{cellData.background}}' style='width:100%;height:898rpx;border-radius:5%;'>
+      <block wx:for="{{arr}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="party-a">
+      <image class="{{cellData.precent!=100?'animation-clockwise':''}}" src='{{cellData.party_A_logo}}' style='width:120rpx;height:120rpx;border-radius:50%;'></image>
+    </view>
+    <view class="party-b">
+      <image class="{{cellData.precent!=100?'animation-anticlockwise':''}}" src='{{cellData.party_B_logo}}' style='width:120rpx;height:120rpx;border-radius:50%;'></image>
+    </view>
+  </view>
+  <view class='topExpress'>
+
+    <view class='title'>{{cellData.name}}</view>
+    <text class='topExpress-right-middle'>甲方：{{cellData.party_A}}</text>
+    <text class='topExpress-right-middle'>乙方：{{cellData.party_B}}</text>
+  </view>
+
+  <!-- 正式开始 -->
+  <view class='expressRecord'>
+    <view class='item' wx:for="{{cellData.steps}}" wx:key="item" data-id="{{index}}">
+      <view class="item {{index%2==0?'odd':'even'}}">
+        <!-- 左边子容器 -->
+        <view class='item-left'>
+          <!-- 上半根时间线 -->
+          <block wx:if="{{index==0}}">
+            <view class="timeline-invisible"></view>
+          </block>
+          <block wx:elif="{{item.state==1}}">
+            <view class="timeline-soild"></view>
+          </block>
+          <block wx:else>
+            <view class="timeline-dash"></view>
+          </block>
+          <!-- --------------------------------------------------------------- -->
+          <!-- 时间点 -->
+          <block wx:if="{{item.state==-1}}">
+            <!-- <view class="timeline-dot"></view> -->
+            <image src='https://6e78-nx-dev-mu12k-1259157405.tcb.qcloud.la/%E7%AD%BE%E7%BD%B2%E6%8C%89%E9%92%AE.png?sign=8b85afdacea61715f94e233fa164ef26&t=1557585835' style='position: absolute;top: 35rpx;margin-left: 48rpx;width:40rpx;height:40rpx;border-radius:50%;'></image>
+          </block>
+          <block wx:elif="{{item.state==1}}">
+            <view class='timeline-dot'></view>
+          </block>
+          <block wx:else="{{item.state==0}}">
+            <view class='timeline-dot-unfinished'></view>
+          </block>
+
+          <!-- 下半根时间线 -->
+          <block wx:if="{{index==cellData.steps.length-1}}">
+            <view class="invisible">{{cellData.steps[index+1].date}}</view>
+          </block>
+          <block wx:elif="{{cellData.steps[index+1].state==1}}">
+            <view class="timeline-soild"></view>
+          </block>
+          <block wx:else>
+            <view class="timeline-dash"></view>
+          </block>
+        </view>
+        <!-- 右边子容器 -->
+        <view class='item-right'>
+          <block wx:if="{{index==0}}">
+            <view class="item-font-bold">签署合同</view>
+          </block>
+          <block wx:elif="{{index==1}}">
+            <view class="item-font-bold">首付款</view>
+          </block>
+          <block wx:elif="{{index==cellData.steps.length-1}}">
+            <view class="item-font-bold">尾款</view>
+          </block>
+          <block wx:else>
+            <view class="item-font-bold">第{{index}}次付款</view>
+          </block>
+
+          <view class='item-font-normal'>{{item.date}}</view>
+          <view wx:if="{{item.warning!=''}}">
+            <view class="coupon">
+              <image src='https://6e78-nx-dev-mu12k-1259157405.tcb.qcloud.la/%E5%BB%B6%E8%AF%AF.png?sign=3d096031d32d1b33d502e38c4b18de6f&t=1557547461' style='width:30rpx;height:30rpx;border-radius:50%; margin-right:10rpx'></image>
+              <text>{{item.warning}}</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,16 @@
+<view class="container">
+  <!-- <view class="logo-group">
+    <image class='logo' src="../../images/avatar.png"></image>
+  </view> -->
+  <view class="avatar-container">
+    <open-data type="userAvatarUrl" class='avatar' />
+  </view>
+
+  <text class='title'>楠兮商务小程序 申请授权</text>
+  <text class='sub-title'>获取您的公开信息（昵称、头像等）</text>
+
+  <button class = 'btn' type='primary' open-type='getUserInfo' bind:getuserinfo="onGetUserInfoEvent">微信用户授权登录</button>
+  <button class = 'btn' type='default' bindtap="onCancelEvent">返回</button>
+
+
+</view>

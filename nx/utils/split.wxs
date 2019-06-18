@@ -1,0 +1,13 @@
+var dateUtil = {
+  dateSplit: function (value) {//"2019-04-23"
+    var s1 = value.slice(0, 4)
+    var s2 = value.slice(5)
+    return [s1,s2]
+  }
+}
+
+module.exports = {
+  dateSplit: dateUtil.dateSplit //暴露接口调用
+}
+
+

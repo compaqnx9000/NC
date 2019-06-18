@@ -1,0 +1,153 @@
+<wxs module="dateUtil" src="../../utils/split.wxs"></wxs>
+<wxs module="timeUtil" src="../../utils/time.wxs"></wxs>
+
+<navBar title='我的' show_bol='{{false}}' tag-class="ex-tag"></navBar>
+
+
+<!-- <view class='mask' hidden='{{maskFlag}}'>
+  <view bindtap='deleteComment' class='op-comment' hidden='{{maskFlag}}'>删除评论</view>
+
+</view> -->
+
+
+
+<view class='container'>
+
+  <view class="header">
+    <!-- <image src='../../images/sbk2.png' style='width:100%;height:831rpx;border-radius:5%;'></image> -->
+    <image src='{{supplier.bkImage}}' style='width:100%;height:831rpx;border-radius:5%;'></image>
+  </view>
+
+
+  <!-- 
+  <view>
+    <image src='../../images/temp1.png' style='width:100%;height:831rpx'></image>
+  </view> -->
+
+  <view class='reg-info'>
+    <text style="margin-left:48rpx;font-size:20rpx;font-weight: 800">{{cellData.office_address}}</text>
+    <view style="display:flex;flex-direction:row;justify-content:center">
+      <view style='margin-left:48rpx;width:65%;'>
+        <text style="height:100rpx;max-width:460rpx;font-weight: 800;color:#3d3d3d;font-size:32rpx;">{{cellData.name}}</text>
+      </view>
+      <view style='width:5%'></view>
+      <view style='display:flex;width:30%;justify-content:center'>
+        <image src='{{supplier.frontImg}}' style='width:96rpx;height:96rpx;border-radius: 50%;'></image>
+      </view>
+    </view>
+    <!-- 胶囊 -->
+    <view style="display:flex;flex-direction:row;flex-wrap:wrap;margin:10rpx 60rpx 20rpx 48rpx;align-items:center">
+      <block wx:for="{{supplier.features}}">
+        <text class='capsule'> {{item}}</text>
+      </block>
+      <block wx:for="{{supplier.descriptions}}">
+        <text class='capsule2'> {{item}}</text>
+      </block>
+    </view>
+
+    <!-- 黑板 -->
+    <view wx:if="{{supplier.blackboard}}" class="blackboard">
+      <view style='display:flex;align-items: center;margin:0 20rpx'>
+        <image src='../../images/clock.png' style='width:64rpx;height:64rpx;border-radius: 50%;'></image>
+      </view>
+
+      <view style='display:flex;line-height: 30rpx;margin-top:20rpx;margin-bottom:20rpx;margin-right:20rpx'>
+        <view>
+          <text style="color:3d3d3d; font-size:12px; font-weight:800">{{supplier.blackboard[0]}}</text>
+          <text style="font-size:12px">{{supplier.blackboard[1]}}</text>
+        </view>
+      </view>
+
+
+
+    </view>
+
+
+
+
+
+    <view style="display: flex;">
+      <text style="color:#3d3d3d;margin-left:48rpx;width:40%;font-size:28rpx;font-weight: 800">统一社会信用代码：</text>
+      <text class="font-body">{{cellData.code}}</text>
+    </view>
+    <view style="display: flex">
+      <text style="color:#3d3d3d;margin-left:48rpx;width:40%;font-size:28rpx;font-weight: 800">法定代表人：</text>
+      <text class="font-body">{{cellData.LAR}}</text>
+    </view>
+    <view style="display: flex;">
+      <text style="color:#3d3d3d;margin-left:48rpx;width:40%;font-size:28rpx;font-weight: 800">成立日期</text>
+      <text class="font-body">{{cellData.created_date}}</text>
+    </view>
+    <view style="display: flex;">
+      <text style="color:#3d3d3d;margin-left:48rpx;width:40%;font-size:28rpx;font-weight: 800">注册资本：</text>
+      <text class="font-body" style='width:400rpx'>{{cellData.reg_capital}}万人民币</text>
+    </view>
+
+    <view wx:if="{{more}}" style="display: flex;flex-wrap:nowrap">
+      <text style="color:#3d3d3d;margin-left:48rpx;flex-basis:40%;font-size:28rpx;font-weight: 800">注册地址：</text>
+      <text class="font-body" style='width:400rpx'>{{cellData.address}}</text>
+    </view>
+
+
+    <text bindtap="clickMore" style="margin-left:48rpx;font-size:28rpx;color:#008489">{{more?'收起':'查看更多企业信息'}}</text>
+
+  </view>
+  <view class='case-info'>
+    <text style="margin-left:48rpx;width:40%;font-size:32rpx;font-weight: 800;color:#3d3d3d;">成功案例</text>
+    <!-- 循环遍历成功案例 -->
+    <block wx:for="{{supplier.cases}}">
+      <view style="display: flex;align-items: center;margin-left:56rpx;">
+        <view class='li'></view>
+        <text class="font-body">{{item}}</text>
+      </view>
+    </block>
+
+    <view style="display: flex;align-items: center;margin-left:56rpx;">
+      <view class='li'></view>
+      <text class="font-body">...</text>
+    </view>
+  </view>
+
+  <!-- 地图 -->
+  <view class='case-info'>
+    <text bindtap="onMapClickEvent" style="margin-left:48rpx;width:40%;font-size:32rpx;font-weight: 800;color:#3d3d3d;">地图</text>
+    <view class="" hover-class="none" hover-stop-propagation="false" style="height: 100%;padding: 20rpx 30rpx">
+      <map id="map" longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="13" show-location style="width: 100%; height: 200px;"></map>
+    </view>
+  </view>
+
+  <view class="evaluation-group">
+    <text style="margin-left:48rpx;width:40%;font-size:32rpx;font-weight: 800;color:#3d3d3d;">评价</text>
+    <block wx:for="{{comments}}">
+      <view  class="evaluation-item">
+        <view class="evaluation-item-left">
+          <image src="{{item.avatar}}" style='width:64rpx;height:64rpx;border-radius: 50%;'></image>
+        </view>
+        <view class="evaluation-item-right">
+          <view style="display:flex;width:550rpx;justify-content:space-between">
+            <text style='font-size:32rpx;font-weight:800;color:#898989'>{{item.author}}</text>
+            <text data-id="{{item._id}}" bindtap="onDeleteClickEvent" style='font-size:32rpx;font-weight:800;color:#640b36' wx:if="{{myid == item.openid}}"> 删除</text>
+          </view>
+
+
+          <text style='font-size:22rpx;color:#b7b7b7'>{{timeUtil.timeFormat(item.create_time)}}</text>
+          <text class="font-body">{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+
+
+
+
+  </view>
+
+  <form class='detail-view' bindsubmit='onCommitEvent'>
+    <textarea value='{{content}}' bindinput='onInputEvent' name='content' class='detail-textarea' placeholder="请点评对此供应商的评价（不超过200字）" auto-height='true' maxlength='200' />
+    <button formType='submit' type='primary' disabled='{{!content}}'>发表</button>
+  </form>
+
+</view>
+
+
+
+<view style='height:50rpx' />

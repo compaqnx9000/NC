@@ -1,0 +1,360 @@
+page {
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  line-height: 48rpx;
+}
+
+.header {
+  display: flex;
+  position: relative;
+}
+
+.goBack {
+  position: absolute;
+  left: 50rpx;
+  top: 34px;
+}
+
+.topExpress {
+  width: 710rpx;
+  height: 280rpx;
+  background: #fff;
+  margin: 10rpx auto;
+  display: flex;
+  border-radius: 10rpx;
+}
+
+.topExpress-left {
+  width: 160rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50rpx;
+  /* align-items: center; */
+}
+
+.topExpress-right {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-size: 26rpx;
+  color: #666;
+  padding: 20rpx 0;
+}
+
+.expressRecord {
+  width: 710rpx;
+  padding-top: 30rpx;
+  padding-bottom: 40rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 10rpx;
+}
+
+.expressRecord-getAddress {
+  display: flex;
+  width: 100%;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.expressRecord-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.getAddress-icon {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #999;
+  font-size: 18rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 80rpx;
+}
+
+.getAddress-text {
+  margin-left: 20rpx;
+}
+
+.noReach-online-top-close {
+  /* width: 1rpx; */
+  height: 150rpx;
+  /* background: #ededed; */
+  margin-left: 95rpx;
+  border-left: dashed #ddd 1rpx;
+}
+
+.expressRecord-single-close {
+  width: 100%;
+  height: 122rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.expressRecord-single-noReach-online-top-close {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 浅颜色时间线 */
+
+.online-top-closing {
+  width: 2rpx;
+  height: 60rpx;
+  background: #999;
+  margin-left: 95rpx;
+}
+
+.online-top-close {
+  width: 1rpx;
+  height: 50rpx;
+  background: #999;
+  margin-left: 95rpx;
+}
+
+.dot-closing {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  margin-left: 88rpx;
+  /* margin-top: 6rpx; *//* margin-bottom: 6rpx; */
+  background: #666;
+}
+
+.dot-close {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  margin-left: 90rpx;
+  margin-top: 6rpx;
+  margin-bottom: 6rpx;
+  background: #999;
+}
+
+.online-bottom {
+  width: 1rpx;
+  height: 60rpx;
+  background: #999;
+  margin-left: 95rpx;
+}
+
+.expressRecord-text {
+  margin-left: 30rpx;
+  line-height: 32rpx;
+}
+
+.expressRecord-statusing {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.expressRecord-status-addressing {
+  font-size: 22rpx;
+  color: #666;
+  padding-right: 20rpx;
+}
+
+.expressRecord-dating {
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  align-items: flex-end;
+  left: 20rpx;
+  position: absolute;
+  line-height: 30rpx;
+}
+
+.expressRecord-date-text {
+  font-size: 20rpx;
+}
+
+.expressRecord-date-time {
+  font-size: 18rpx;
+}
+
+.border {
+  display: flex;
+  flex-direction: column;
+  border: 8rpx solid #c99941;
+  margin: 20rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333a40;
+}
+
+.reg-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+
+.evaluation-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+
+.evaluation-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+
+.evaluation-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0rpx;
+}
+
+.evaluation-item-left {
+  display: flex;
+  flex-direction: row;
+  margin-top: 22rpx;
+  margin-left: 24px;
+}
+
+.evaluation-item-right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  padding-left: 24rpx;
+  padding-right: 32rpx;
+}
+
+/* 新样式 */
+
+.font-body {
+  color: #484848;
+  font-size: 28rpx;
+}
+
+.li {
+  background: #484848;
+  margin-left: 48rpx;
+  margin-right: 16rpx;
+  width: 15rpx;
+  height: 15rpx;
+}
+
+.capsule {
+  font-size: 22rpx;
+  font-weight: bold;
+  /* *//* border: 1px solid #b28f17; */
+  padding: 0rpx 20rpx;
+  color: #2a6e00;
+  border-radius: 27px;
+  background: #eaf7eb;
+  margin: 10rpx 10rpx 0 0;
+  box-sizing: border-box;
+}
+
+.capsule2 {
+  font-size: 22rpx;
+  font-weight: bold;
+  /* *//* border: 1px solid #b28f17; */
+  padding: 0rpx 20rpx;
+  color: #484848;
+  border-radius: 27px;
+  background: #f3f3f3;
+  margin: 10rpx 10rpx 0 0;
+  box-sizing: border-box;
+}
+
+.blackboard {
+  display: flex;
+  align-items: center;
+  /* justify-content:center; */
+  margin: 40rpx 0;
+  flex-wrap: nowrap;
+  background-color: #f3f9fa;
+  border: 1rpx solid #cfe8e9;
+  margin-left: 48rpx;
+  margin-right: 48rpx;
+  border-radius: 15rpx;
+}
+
+/* 实现textarea高度自适应 */
+
+.detail-view {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  /* 用于重叠 *//* position: relative; */
+  margin: 40rpx 20rpx;
+  min-height: 80rpx;
+  border-top:1rpx solid #f5f5f5;
+}
+
+.detail-placeholder {
+  /* 用于重叠 */
+  position: absolute;
+  /* 用于与textarea的光标起始位置对齐 */
+  padding: 0 10rpx;
+  min-height: 100%;
+  color: #c9c9c9;
+  font-size: 28rpx;
+}
+
+.detail-view .detail-textarea {
+  display: inline-block;
+  /* 用于顶部与text对齐 *//* top: -12rpx; */
+  width: 550rpx;
+  font-size: 28rpx;
+  /* border-top: 1rpx solid #cfe8e9; *//* border: 1rpx solid #cfe8e9; */
+  height: 20px;
+  /* background: #ff0000; */
+  padding: 10rpx 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  background: #f4f5f6;
+}
+
+.detail-view button {
+  display: inline-block;
+  width: 100rpx;
+  margin-top: 20rpx;
+  font-size: 22rpx;
+}
+
+.mask {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  /* background-color: #000; */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  /* opacity: 0.5; */
+}
+
+.op-comment {
+  background-color: #fff;
+  width: 80%;
+  height: 80rpx;
+  margin: 300rpx 0;
+  /* opacity: 1; */
+  z-index: 999;
+}

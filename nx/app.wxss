@@ -1,0 +1,20 @@
+.custom {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  background: #fa4759;
+  z-index: 999;
+}
+
+.custom text {
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 500;
+  max-width: 280rpx;
+}
+
+page{
+  font-family: "PingFangSC"
+}

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/supplier/supplier",
+    "pages/contract/contract",
+    "pages/my/my",
+    "pages/supplier-detail/supplier-detail",
+    "pages/contract-detail/contract-detail",
+    "pages/supplier-search/supplier-search",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的云开发",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#00c3ff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "/images/tab/supplier@highlight.png",
+        "iconPath": "/images/tab/supplier.png",
+        "pagePath": "pages/supplier/supplier"
+      },
+      {
+        "selectedIconPath": "/images/tab/contract@highlight.png",
+        "iconPath": "/images/tab/contract.png",
+        "pagePath": "pages/contract/contract"
+      },
+      {
+        "selectedIconPath": "/images/tab/mine@highlight.png",
+        "iconPath": "/images/tab/mine.png",
+        "pagePath": "pages/my/my"
+      }
+    ]
+  },
+  "cloud": true,
+  "sitemapLocation": "sitemap.json"
+}

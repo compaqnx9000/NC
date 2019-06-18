@@ -1,0 +1,17 @@
+<view class="box">
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>
+
+<view class="num-wrap">
+  <text>{{number}}</text>
+</view>
+
+<view class='item-group'>
+  <block wx:for="{{projects}}">
+    <view class='item'>
+      <view class='item-left'>{{item.fullname}}</view>
+      <view class='item-right'>{{item.value}}</view>
+    </view>
+  </block>
+
+</view>

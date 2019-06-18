@@ -1,0 +1,59 @@
+<wxs module="ThousandsUtil" src="../../utils/format.wxs"></wxs>
+<!-- <navBar title='合同' show_bol='{{true}}' tag-class="ex-tag"></navBar> -->
+
+<view class='container'>
+  <view class="header">
+    <view src='https://6e78-nx-dev-mu12k-1259157405.tcb.qcloud.la/%E5%90%88%E5%90%8C%E8%83%8C%E6%99%AF%E5%9B%BEfull.png?sign=2ae0d59de023452f3cbd36999c546643&t=1557799799' style='width:100%;height:520rpx;border-radius:5%; background:#739f68'></view>
+    <image src='../../images/c-avatar.png' class="avatar"></image>
+
+    <text class='card-title'>合同集合列表</text>
+    <text class='card-sub-title'>采购合同和承接合同</text>
+
+    <text class='supplier-total'>{{total}}</text>
+    <text class='supplier'>合同总数</text>
+
+    <text class='cooperated-count'>{{finished}}</text>
+    <text class='cooperated'>已完成</text>
+
+    <image src='../../images/person.png' class="icon-left"></image>
+    <image src='../../images/five-star.png' class="icon-right"></image>
+  </view>
+
+  <view style="background: #f7f9fb;padding-top:100rpx">
+
+  </view>
+
+  <navigator url="/pages/contract-detail/contract-detail?name={{item.name}}" class='coupon' wx:for="{{cellData}}" wx:key="item" data-id="{{index}}">
+    <view class='coupon-left'>
+      <view class='coupon-left-left'>
+        <image class='image' mode='aspectFit' src='{{item.frontImg}}'></image>
+      </view>
+      <view class='coupon-left-right'>
+        <text class='title'>{{item.name}}</text>
+        <text class='price'>{{ThousandsUtil.add_comma_toThousands(item.price)}}元</text>
+      </view>
+    </view>
+    <view class='coupon-right'>
+      <progress class='progress' percent='{{item.precent}}' activeColor="white" backgroundColor="rgba(0, 0, 0, 0.2)" stroke-width="4" active/>
+      <view>
+        <text class='progress-title-font'>已完成</text>
+        <text class='progress-title'>{{item.precent}}</text>
+        <text class='progress-title-font'>%</text>
+      </view>
+
+      <view>
+        <text class='date'>{{item.period}}</text>
+      </view>
+
+
+    </view>
+    <view class='circle1'></view>
+    <view class='circle2'></view>
+
+  </navigator>
+
+
+</view>
+
+<button wx:if="{{hasMoreData}}" class="loading" loading disabled>正在加载...</button>
+<button wx:else class="loading" disabled>------------  我是有底线的  ------------</button>

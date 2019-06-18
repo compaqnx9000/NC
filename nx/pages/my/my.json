@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "image-button": "/components/image-button/image-button",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}
